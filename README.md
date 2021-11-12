@@ -1,4 +1,4 @@
-*Money Maker*
+*Money Watcher*
 
 *Tanel Volkov ja Caroly Vilo*
 
