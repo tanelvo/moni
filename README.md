@@ -1,4 +1,4 @@
-*Money Maker*
+*Money Maker* \n
 Tanel Volkov ja Caroly Vilo
 
 Money Watcheris saab hallata oma isiklikke rahaasju, jälgida oma kulusid ja tulusid ning võrrelda oma raha käsitlust läbi kuude üle mitme vahendi.
