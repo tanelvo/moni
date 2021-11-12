@@ -23,3 +23,5 @@ Kasutus:
 *Kui aega on siis veel statistikat käibe kohta.
 
 Wireframe:
+![consept](https://user-images.githubusercontent.com/70900278/141458990-021ca52c-bfbe-42f7-961d-4fdc82b1f48d.png)
+![consept2](https://user-images.githubusercontent.com/70900278/141459047-6d6d74ab-0279-4580-b083-83e7be5ad01f.png)
