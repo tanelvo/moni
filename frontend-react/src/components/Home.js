@@ -2,7 +2,20 @@ import React from 'react'
 
 function Home(){
     return (
-        <h1>Test</h1>
+        <>
+            <div className="expenses-section">
+
+            </div>
+
+            <div className="watcher-display">
+                <h1>Test</h1>
+            </div>
+
+            <div className="income-section">
+
+            </div>
+
+        </>
     )
 }
 

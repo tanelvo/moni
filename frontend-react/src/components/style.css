@@ -1,0 +1,48 @@
+/* Kõik styling tuleb siia */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+}
+
+/* Navigation bar styles */
+
+#navbar-link-el {
+    text-decoration: none;
+    padding: 0 1rem;
+    color: white;
+    opacity: 0.6;
+}
+#navbar-link-el:hover {
+    opacity: 1;
+}
+#navbar-logo {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+#basic-nav-dropdown {
+    color: rgb(214, 214, 214);
+}
+#basic-nav-dropdown:hover {
+    color: white;
+}
+/* Register page styles */
+.register-form {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+#register-submit-btn {
+    width: 100%;
+}
+/* Login page styles */
+.login-form {
+    display: grid;
+    place-items: center;
+}
