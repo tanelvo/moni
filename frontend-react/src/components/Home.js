@@ -1,20 +1,36 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Display from './Display'
+import Expenses from './Expenses'
+import Income from './Income'
+
+
+
 
 function Home(){
     return (
         <>
-            <div className="expenses-section">
-
-            </div>
-
-            <div className="watcher-display">
-                <h1>Test</h1>
-            </div>
-
-            <div className="income-section">
-
-            </div>
-
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="expenses-section">
+                            <Expenses/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="watcher-display">
+                            <Display/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="income-section">
+                            <Income/>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </>
     )
 }
