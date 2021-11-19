@@ -46,3 +46,6 @@ body {
     display: grid;
     place-items: center;
 }
+.customCard {
+    background: #fff !important;
+}
