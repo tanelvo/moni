@@ -1,7 +1,5 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-bootstrap'
 import Display from './Display'
 import Expenses from './Expenses'
 import Income from './Income'
@@ -10,6 +8,7 @@ import Income from './Income'
 
 
 function Home(){
+
     return (
         <>
             <Container>
