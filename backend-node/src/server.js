@@ -1,10 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const User = require('./models/User')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 require("dotenv").config()
 const authRoutes = require('./routes/auth')
-
+const categoryRoutes = require('./routes/category');
 
 const app = express()
 
@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({
 }))*/
 
 app.use('/', authRoutes)
+app.use('/category', categoryRoutes)
 
 app.post('/register2', (req, res) => {
     console.log(JSON.stringify(req.body))

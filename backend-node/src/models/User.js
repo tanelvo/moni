@@ -23,6 +23,10 @@ const userInfoSchema = new Schema({
     transactions: [{
         type: Schema.Types.ObjectId,
         ref: "Transaction"
+    }],
+    categories:[{
+        type: Schema.Types.ObjectId,
+        ref: "Category"
     }]
 })
 
