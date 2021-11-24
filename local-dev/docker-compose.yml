@@ -29,7 +29,7 @@ services:
       - '8081:3000'
       - '9000:9000'
     environment: 
-      MONGODB_URI: mongodb://root:root@mongo/if18?authSource=admin
+      MONGODB_URI: mongodb+srv://admin:l48ie3xpwHnsi7L2@moni.7liz1.mongodb.net/monidb
     volumes: 
       - '../backend-node:/home/node/app:delegated'
     command: 'run dev'
