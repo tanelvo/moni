@@ -1,8 +1,9 @@
 const { Schema, model } = require('mongoose')
 
 const transactionSchema = new Schema({
-    isInc: {
-        type: Boolean,
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category', // FK
         required: true
     },
     title: {
@@ -11,11 +12,6 @@ const transactionSchema = new Schema({
     },
     amount: {
         type: Number,
-        required: true
-    },
-    owner: {
-        type: Schema.Types.ObjectId, 
-        ref: 'User', // FK
         required: true
     }
 })

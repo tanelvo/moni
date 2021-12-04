@@ -5,14 +5,14 @@ const categorySchema = new Schema({
       type: String,
       required: true },
     ifIncome: {
-      type: Boolean,
+      type: Number,
       required: true
     },
     color: { 
       type: String
     },
     owner: {
-      type: Schema.Types.ObjectId, 
+      type: String, 
       ref: 'User', // FK
       required: false
   }
