@@ -13,22 +13,6 @@ function Cards(props) {
     return(
         <>
         { /*  Nupp, mis näitab kategooriat ja kategooria summat  */}
-        {/*<div onClick={() => handleShow()}>
-        <Card className="customCard">
-            <Card.Body style={{background:color}}>
-                <Container>
-                    <Row>
-                        <Col>
-                        <Card.Subtitle style={{ fontSize: 16, textAlign: "left" }}>{category}</Card.Subtitle>
-                        </Col>
-                        <Col>
-                        <Card.Subtitle style={{ fontSize: 16, textAlign: "right" }}>{amount}</Card.Subtitle>
-                        </Col>
-                    </Row>
-                </Container>
-            </Card.Body>
-        </Card>
-        </div>*/}
         <div onClick={() => handleShow()} style={{marginTop:"5px"}}>
         <Button variant="dark" size="lg" style={{background:color, border:color, width:"100%"}}> { category }
             <Badge bg="dark" style={{textAlign: "right"}}>{amount}</Badge>

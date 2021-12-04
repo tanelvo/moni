@@ -4,6 +4,14 @@ exports.getCategories = async (req, res) => {
     const categories = await Category.find({})
     res.status(200).send(categories)
 }
+exports.getCategoriesByID = async (req, res) => {
+    const {id} = req.params;
+    const categories = await Category.find({
+        owner: id
+    })
+    if (!categories) res.status(404).send("Categories not found")
+    res.status(200).send(categories)
+}
 
 exports.createCategory = async (req, res) => {
     const {title, ifIncome, color, owner} = req.body;
