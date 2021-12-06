@@ -12,7 +12,7 @@ exports.login = async (req, res) => {
     if (!user) throw Error("User with this e-mail does not exist")
 
     const isMatch = await bcrypt.compare(password, user.password)
-    if (!isMatch) throw Error("I should not say that the password does not match")
+    if (!isMatch) throw Error("Incorrect password")
 
     const userTemplate = {
       id: user.id,
@@ -28,6 +28,7 @@ exports.login = async (req, res) => {
       token,
       ...userTemplate
     })
+
 
   } catch (e){
     res.status(400).json({ error: e.message })
