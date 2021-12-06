@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 require('dotenv').config()
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
 
@@ -44,12 +45,14 @@ function Register() {
     return (
         <div className="register-form">
             <Form onSubmit={handleSubmit}>
+                <h1 id="form-headers">Registreeru!</h1>
                 <Form.Control onChange={handleChange} value={formData.firstName} name="firstName" type="text" placeholder="Eesnimi" />
                 <Form.Control onChange={handleChange} value={formData.lastName} name="lastName" type="text" placeholder="Perekonnanimi" />
                 <Form.Control onChange={handleChange} value={formData.email} name="email" type="email" placeholder="E-post" />
                 <Form.Control onChange={handleChange} value={formData.password} name="password" type="password" placeholder="Salasõna" />
                 <Form.Control onChange={handleChange} value={formData.initBalance} name="initBalance" type="number" placeholder="Konto summa" />
                 <Button variant="primary" type="submit" id="register-submit-btn">Registreeru!</Button>
+                <p id="register-login-link"><Link to="/login">Kasutaja olemas? Logi sisse</Link></p>
             </Form>
         </div>
     )

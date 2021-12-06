@@ -12,6 +12,7 @@ const jwtAuth = (req, res, next) => {
     next()
 
   } catch (e) {
+    res.redirect('/login')
     return res.status(401).send({ error: e.message })
   }
 }
