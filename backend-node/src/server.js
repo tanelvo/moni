@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000
 require("dotenv").config()
 const authRoutes = require('./routes/auth')
 const categoryRoutes = require('./routes/category');
+const transactionRoutes = require('./routes/transaction');
 
 const app = express()
 app.use(cors())
@@ -13,6 +14,7 @@ app.use(express.json())
 
 app.use('/', authRoutes)
 app.use('/category', categoryRoutes)
+app.use('/transaction', transactionRoutes)
 
 app.post('/register2', (req, res) => {
     console.log(JSON.stringify(req.body))

@@ -2,6 +2,7 @@ import React from 'react'
 import Cards from './Cards'
 import { Button, Modal, Form } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
+import jwt from 'jwt-decode'
 import axios from 'axios'
 require('dotenv').config()
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
@@ -10,30 +11,36 @@ function Income() {
     const [isLoading, setIsLoading] = useState(true);
     const [Category, setCategories] = useState([]);
     const [Color, setColors] = useState([]);
+    const[Id, setIds] = useState([]);
+    const token = localStorage.getItem('token')
+    const tokenDec = jwt(token)
+    const owner = tokenDec.id;
     const Count = [];
-    let Amount=["123","222","333","100","100","100"]
 
     // Kasutaja kategooriate tõmbamine
     useEffect(() => {
-        const user = "12321";
-        axios.get(`${SERVER_URL}/category/user/${user}`)
+        axios.get(`${SERVER_URL}/category/user/${owner}`)
             .then(response => {
                 const catArray = [];
                 const colArray = [];
+                const idArray = [];
                 for (var i = 0; i < response.data.length; i++) {
                     const cat = response.data[i].title;
                     const col = response.data[i].color;
+                    const id = response.data[i]._id;
                     if(response.data[i].ifIncome === 1){
                         catArray.push(cat);
                         colArray.push(col);
+                        idArray.push(id);
                     }
                 }  
                 setCategories(catArray);
                 setColors(colArray);
+                setIds(idArray);
                 setIsLoading(false);
             })
             .catch(error => console.error(error));
-    }, [])
+    }, [owner])
     
     // Uue kategooria loomine
     const [formData, setFormData] = React.useState({
@@ -47,11 +54,10 @@ function Income() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        const Owner = "12321"
         axios.post(`${SERVER_URL}/category/create`, {
             title: formData.title,
             ifIncome: 1,    
-            owner: Owner,
+            owner: owner,
             color: formData.color
         })
         .then((res) => {
@@ -60,7 +66,7 @@ function Income() {
         .catch((err) => {
             console.log(err)
         })
-        
+        //window.location.reload(false);
     }
 
     
@@ -71,9 +77,9 @@ function Income() {
     for(var i = 0; i < Category.length; i++){Count.push(i)}
 
     // Genereerib ükshaaval nupud
-    let cardList =Count.map((i)=>{ console.log(i)
+    let cardList =Count.map((i)=>{
         return (
-                <Cards amount={Amount[i]} category={Category[i]} color={Color[i]} border="#999" key={"key"+i}/>
+                <Cards category={Category[i]} color={Color[i]} id={Id[i]} ifInc="1" border="#999" key={"key"+i}/>
         )
     })
 

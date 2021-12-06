@@ -13,7 +13,20 @@ const transactionSchema = new Schema({
     amount: {
         type: Number,
         required: true
-    }
+    },
+    owner: {
+        type: String, 
+        ref: 'User', // FK
+        required: false
+    },
+    ifIncome: {
+        type: Number,
+        required: true
+      },
+    creationDate: {
+        type: Date,
+        required: true
+      }
 })
 
 const Transaction = model("Transaction", transactionSchema)
