@@ -67,3 +67,12 @@ exports.signup = async (req, res) => {
       res.status(400).json({ error: e.message })
     }
   }
+
+  exports.getUser = async (req, res) => {
+    const {id} = req.params;
+    const user = await User.find({
+        _id: id
+    })
+    if (!user) res.status(404).send("Balance not found")
+    res.status(200).send(user)
+  }
