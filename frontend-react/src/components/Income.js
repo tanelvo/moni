@@ -66,7 +66,7 @@ function Income() {
         .catch((err) => {
             console.log(err)
         })
-        //window.location.reload(false);
+        window.location.reload(false);
     }
 
     
@@ -84,10 +84,16 @@ function Income() {
     })
 
     if (isLoading) {
-        return (<div>Loading..</div>)
+        return (
+        <div>
+            <h2>Tulud:</h2>
+            Loading..
+        </div>
+        )
     } else {
         return (
             <>
+                <h2>Tulud:</h2>
                 {cardList}
                 {/* Nupuga peaks avama modali, kus saab andmebaasi uue kategooria päringu teha  */}
                 <Button variant="dark" onClick={handleShow} style={{marginTop:"5px"}}>Lisa kategooria</Button>

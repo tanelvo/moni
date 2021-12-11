@@ -5,6 +5,8 @@ import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
+import History from './components/History';
+import Settings from './components/Settings';
 import PrivateRoute from './components/PrivateRoute';
 import './components/style.css'
 import React from 'react';
@@ -21,6 +23,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route exact path="/" element={<PrivateRoute />}>
             <Route exact path="/" element={<Home />}/>
+            <Route exact path="/history" element={<History />}/>
+            <Route exact path="/settings" element={<Settings />}/>
           </Route> 
         </Routes>
       </React.Fragment>

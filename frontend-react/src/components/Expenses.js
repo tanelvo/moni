@@ -67,7 +67,7 @@ function Expenses() {
         .catch((err) => {
             console.log(err)
         })
-        //window.location.reload(false);
+        window.location.reload(false);
     }
 
     
@@ -80,15 +80,20 @@ function Expenses() {
     // Genereerib ükshaaval nupud
     let cardList =Count.map((i)=>{
         return (
-                <Cards category={Category[i]} color={Color[i]} id={Id[i]} ifInc="0" border="#999" key={"key"+i}/>
+                <Cards category={Category[i]} color={Color[i]} id={Id[i]} ifInc="0" border="#999" key={"key"+i} className="d-flex justify-content-between align-items-start"/>
         )
     })
 
     if (isLoading) {
-        return (<div>Loading..</div>)
+        return (
+        <div>
+            <h2>Kulud:</h2>
+            Loading..
+        </div>)
     } else {
         return (
             <>
+                <h2>Kulud:</h2>
                 {cardList}
                 {/* Nupuga peaks avama modali, kus saab andmebaasi uue kategooria päringu teha  */}
                 <Button variant="dark" onClick={handleShow} style={{marginTop:"5px"}}>Lisa kategooria</Button>
