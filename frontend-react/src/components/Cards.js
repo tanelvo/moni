@@ -59,6 +59,7 @@ function Cards(props) {
         .catch((err) => {
             console.log(err)
         })
+        window.location.reload(false)
     }
 
     const sum = amount.reduce((a, b) => a + b, 0);      // https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers
@@ -95,12 +96,6 @@ function Cards(props) {
                     </Button>
                     </Form>
                 </Modal.Body>
-                <Modal.Footer>
-                    
-                    <Button variant="danger" onClick={handleClose}>
-                        Sulge
-                    </Button>
-                </Modal.Footer>
             </Modal>
         </>
         )

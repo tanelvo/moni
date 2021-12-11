@@ -34,13 +34,16 @@ function NavigationBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto">
-                    <Link id="navbar-link-el" to="/">Home</Link>    {/* AJUTINE! Praegu ainult selleks, et lihtsam navigeerida */}
+                    <Link id="navbar-link-el" to="/">Home</Link>
+                    <Link id="navbar-link-el" to="/history">Ajalugu</Link>    {/* AJUTINE! Praegu ainult selleks, et lihtsam navigeerida */}
                     {/* <Link id="navbar-link-el" to="/login">Login</Link> AJUTINE! Praegu ainult selleks, et lihtsam navigeerida
                     <Link id="navbar-link-el" to="/register">Register</Link> AJUTINE! Praegu ainult selleks, et lihtsam navigeerida */}
                     {/* Pärast tuleb siia ainult kogu summa nagu disainis välja toodud */}
                 </Nav>
                 <NavDropdown title={userFirstName} id="basic-nav-dropdown" className="navbar-username-el">
-                    <NavDropdown.Item>Seaded</NavDropdown.Item>
+                    <NavDropdown.Item >
+                        <Link id="navbar-link-el" to="/settings">Seaded</Link>  
+                    </NavDropdown.Item>
                     <NavDropdown.Item><button onClick={userLogOut} id="logout-button">Logi välja</button></NavDropdown.Item>
                 </NavDropdown>
                 </Navbar.Collapse>
