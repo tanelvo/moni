@@ -73,7 +73,7 @@ function Cards(props) {
             { /*  Nupp, mis näitab kategooriat ja kategooria summat  */}
             <div onClick={() => handleShow()} style={{marginTop:"5px"}}>
             <Button variant="dark" size="lg" style={{background:color, border:color, width:"100%"}}> { category }&nbsp;
-                <Badge bg="dark" style={{textAlign: "right"}}>{Sum}</Badge>
+                <Badge bg="dark" style={{textAlign: "right"}}>{Sum + "€"}</Badge>
             </Button>
             </div>
             { /* Modal, mis tekib nupu vajutusel */}

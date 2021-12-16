@@ -45,7 +45,7 @@ function Settings() {
                         incIdArray.push(id);
                     }}
                 setExpCategories(expCatArray);
-                setExpIds(expCatArray);
+                setExpIds(expIdArray);
                 setIncCategories(incCatArray);
                 setIncIds(incIdArray);
                 //setIsLoading(false);

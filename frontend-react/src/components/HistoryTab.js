@@ -35,7 +35,7 @@ function HistoryTab (props) {
             <Card className="mt-5" style={{  textAlign: 'center', width: '30rem' }}>
                 <Card.Body >
                     <Card.Subtitle >{Category}</Card.Subtitle>
-                    <Card.Title style={{ fontSize: 30 }}>Summa: {amount}</Card.Title>
+                    <Card.Title style={{ fontSize: 30 }}>Summa: {amount + "€"}</Card.Title>
                     <Card.Title >Kirjeldus:</Card.Title>
                     <Card.Subtitle >{title}</Card.Subtitle><br/>
                     <Card.Subtitle style={{color: '#aaa'}}>{date}</Card.Subtitle>

@@ -58,7 +58,7 @@ function History() {
     return(
       <ListGroup.Item action href={"#link"+i}  className="d-flex justify-content-between align-items-start" variant={ifInc[i]} key={"key"+i}>
         <h5>{title[i]}</h5>
-        <h5>{amount[i]}</h5>
+        <h5>{amount[i] + "€"}</h5>
       </ListGroup.Item>
     )
   })

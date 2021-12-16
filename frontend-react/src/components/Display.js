@@ -57,13 +57,13 @@ function Display(){
                 <Card className="mt-5" style={{  textAlign: 'center' }}>
                     <Card.Body >
                         <Card.Subtitle style={{ fontSize: 14 }}>Konto summa:</Card.Subtitle>
-                        <Card.Title style={{ fontSize: 45 }}>{Sum + balance}</Card.Title>
+                        <Card.Title style={{ fontSize: 45 }}>{Sum + balance + "€"}</Card.Title>
                         <Card.Subtitle style={{ fontSize: 14 }}>Tulud:</Card.Subtitle>
-                        <Card.Title style={{ fontSize: 25 }}>{incomeSum}</Card.Title>
+                        <Card.Title style={{ fontSize: 25 }}>{incomeSum + "€"}</Card.Title>
                         <Card.Subtitle style={{ fontSize: 14 }}>Kulud:</Card.Subtitle>
-                        <Card.Title style={{ fontSize: 25 }}>{expenseSum}</Card.Title>
+                        <Card.Title style={{ fontSize: 25 }}>{expenseSum + "€"}</Card.Title>
                         <Card.Subtitle style={{ fontSize: 14 }}>Vahe:</Card.Subtitle>
-                        <Card.Title style={{ fontSize: 25 }}>{incomeSum - expenseSum}</Card.Title>
+                        <Card.Title style={{ fontSize: 25 }}>{incomeSum - expenseSum + "€"}</Card.Title>
                     </Card.Body>
                 </Card>
             </div>

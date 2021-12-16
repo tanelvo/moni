@@ -41,8 +41,8 @@ function NavigationBar() {
                     {/* Pärast tuleb siia ainult kogu summa nagu disainis välja toodud */}
                 </Nav>
                 <NavDropdown title={userFirstName} id="basic-nav-dropdown" className="navbar-username-el">
-                    <NavDropdown.Item >
-                        <Link id="navbar-link-el" to="/settings">Seaded</Link>  
+                    <NavDropdown.Item as="li" >
+                        <Link id="navbar-link-el2" to="/settings">Seaded</Link>  
                     </NavDropdown.Item>
                     <NavDropdown.Item><button onClick={userLogOut} id="logout-button">Logi välja</button></NavDropdown.Item>
                 </NavDropdown>
